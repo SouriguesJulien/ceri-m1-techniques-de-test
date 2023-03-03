@@ -1,0 +1,16 @@
+version: 2.1
+jobs:
+  build:
+    environment:
+      JVM_OPTS: "-Xmx3200m"
+    working_directory: ~/app
+    executor:
+      name: default
+      size: medium
+    steps:
+      - checkout
+      - run: java -version
+      - run: mvn test
+    branches:
+      only:
+        - master
