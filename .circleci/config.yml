@@ -1,16 +1,25 @@
 version: 2.1
+
 jobs:
-  build:
-    environment:
-      JVM_OPTS: "-Xmx3200m"
-    working_directory: ~/app
-    executor:
-      name: default
-      size: medium
+  build_and_test:
+    docker:
+      - image: cimg/openjdk:11.0
+
     steps:
       - checkout
-      - run: java -version
-      - run: mvn test
-    branches:
-      only:
-        - master
+      - run:
+          name: Build
+          command: mvn -B -DskipTests clean package
+
+      - run:
+          name: Test
+          command: mvn test
+
+
+workflows:
+  sample:
+    jobs:
+      - build_and_test:
+        filters:
+          branches:
+            only: master
