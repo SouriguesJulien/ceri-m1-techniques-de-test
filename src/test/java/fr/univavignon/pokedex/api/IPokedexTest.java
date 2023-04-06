@@ -56,14 +56,14 @@ public class IPokedexTest{
 
     @Test
     public void addPokemonSucceeded() {
-        int index = iPokedex.addPokemon(aquali);
-        assertEquals(133, index);
+        int index = iPokedex.addPokemon(bulbizarre);
+        assertEquals(0, index);
     }
 
     @Test
     public void getPokemonSucceeded() throws PokedexException {
-        iPokedex.addPokemon(aquali);
-        assertEquals(133, iPokedex.getPokemon(133).getIndex());
+        iPokedex.addPokemon(bulbizarre);
+        assertEquals(0, iPokedex.getPokemon(0).getIndex());
     }
 
     @Test

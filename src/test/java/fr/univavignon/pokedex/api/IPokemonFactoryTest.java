@@ -15,7 +15,6 @@ public class IPokemonFactoryTest {
 
     @BeforeEach
     public void setUp() {
-        System.out.println("!!!!!!!!!!!ICI!!!!!!!!!!!");
         pokemonFactory = Mockito.mock(IPokemonFactory.class);
         pokemon = new Pokemon(0, "Bulbizarre", 126, 126, 90, 613, 64, 4000, 4, 56);
 
