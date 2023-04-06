@@ -20,7 +20,7 @@ public class IPokedexFactoryTest {
         pokemonFactory = Mockito.mock(IPokemonFactory.class);
         metadataProvider = Mockito.mock(IPokemonMetadataProvider.class);
         iPokedex = Mockito.mock(IPokedex.class);
-        when(pokedexFactory.createPokedex(metadataProvider, pokemonFactory)).thenReturn(pokedex);
+        when(pokedexFactory.createPokedex(metadataProvider, pokemonFactory)).thenReturn(iPokedex);
     }
 
     @Test
