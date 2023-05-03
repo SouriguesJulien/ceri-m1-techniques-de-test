@@ -1,7 +1,6 @@
-# Julien Sourigues
-## Group Alt 1
+Julien Sourigues
+Group Alt 1
 
-# Template:
 [![CircleCI](https://circleci.com/gh/circleci/ceri-m1-techniques-de-test.svg?style=svg)](https://app.circleci.com/pipelines/github/SouriguesJulien)
 
 
